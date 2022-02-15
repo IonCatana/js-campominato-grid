@@ -31,19 +31,19 @@ play.addEventListener('click', function () {
       numeroColonne = 10;
       gridWrapper.style.backgroundColor = 'green';
       break; // chiude il ciclo
-    
+
     case difficoltà2: //medium
       numeroElementi = 81; // La moltiplicazione delle colonne 9 * 9 = 81
       numeroColonne = 9;
       gridWrapper.style.backgroundColor = 'orange';
       break; // chiude il ciclo
-    
+
     case difficoltà3: // hard
       numeroElementi = 49; // La moltiplicazione delle colonne 7 * 7 = 49
       numeroColonne = 7;
       gridWrapper.style.backgroundColor = 'rgb(221, 83, 19)';
       break; // chiude il ciclo
-    
+
     case difficoltà4: // insane
       numeroElementi = 25; // La moltiplicazione delle colonne 5 * 5 = 25
       numeroColonne = 5;
@@ -58,6 +58,7 @@ play.addEventListener('click', function () {
   for (let i = 1; i <= numeroElementi; i++) {
     const element = document.createElement('div');
     element.classList.add('grid-element');
+    element.addEventListener('click', utenteClick);
     grid.append(element);
     element.style.width = `calc(100% / ${numeroColonne})`;
 
@@ -65,3 +66,7 @@ play.addEventListener('click', function () {
     element.append(i);
   }
 });
+// Quando l’utente clicca su ogni cella, la cella cliccata si colora di blue.
+function utenteClick() {
+  this.style.backgroundColor = 'blue';
+}
