@@ -10,12 +10,13 @@ const difficoltà2 = document.getElementById('medium').value;
 const difficoltà3 = document.getElementById('hard').value;
 const difficoltà4 = document.getElementById('insane').value;
 const play = document.getElementById('btn-play');
-console.log(difficoltà1, difficoltà2, difficoltà3, play);
+console.log(difficoltà1, difficoltà2, difficoltà3);
 
 // Creare la Funzione per tutte 3 difficoltá
 // Creare il buttone Play
 play.addEventListener('click', function () {
   const difficulty = document.getElementById('lvl-difficulty').value;
+  const gridWrapper = document.querySelector('.grid-wrapper');
   console.log(difficulty, 'scelta difficoltá');
 
   // ho creato le variabile
@@ -23,23 +24,30 @@ play.addEventListener('click', function () {
   let numeroColonne = 0;
   let numero = 0;
 
-// Switch le difficoltá
+  // Switch le difficoltá
   switch (difficulty) {
     case difficoltà1: //easy
       numeroElementi = 100; // La moltiplicazione delle colonne 10 * 10 = 100
       numeroColonne = 10;
+      gridWrapper.style.backgroundColor = 'green';
       break; // chiude il ciclo
+    
     case difficoltà2: //medium
       numeroElementi = 81; // La moltiplicazione delle colonne 9 * 9 = 81
       numeroColonne = 9;
+      gridWrapper.style.backgroundColor = 'orange';
       break; // chiude il ciclo
+    
     case difficoltà3: // hard
       numeroElementi = 49; // La moltiplicazione delle colonne 7 * 7 = 49
       numeroColonne = 7;
+      gridWrapper.style.backgroundColor = 'rgb(221, 83, 19)';
       break; // chiude il ciclo
+    
     case difficoltà4: // insane
       numeroElementi = 25; // La moltiplicazione delle colonne 5 * 5 = 25
       numeroColonne = 5;
+      gridWrapper.style.backgroundColor = 'red';
       break; // chiude il ciclo
   }
   const grid = document.querySelector('.grid');

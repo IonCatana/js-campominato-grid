@@ -35,21 +35,22 @@ img {
 /* Grid Wrapper */
 .grid-wrapper {
   margin: 0 auto;
-  background-color: aqua;
+  background-color: #7FFFD4;
   padding: 50px 0;
   display: flex;
   justify-content: center;
 }
 .grid {
-  background-color: blue;
+  background-color:;
   width: 500px;
   aspect-ratio: 1;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
+  cursor: pointer;
 }
 .grid-element {
-  background-color: red;
+  background-color: #7FFFD4;
   display: flex;
   align-items: center;
   justify-content: center;
