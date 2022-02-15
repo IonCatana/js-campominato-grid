@@ -32,7 +32,7 @@ img {
   width: 150px;
 }
 
-
+/* Grid Wrapper */
 .grid-wrapper {
   margin: 0 auto;
   background-color: aqua;
@@ -50,11 +50,14 @@ img {
 }
 .grid-element {
   background-color: red;
-  width: calc(100% / 10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   aspect-ratio: 1;
   border: 1px solid black;
 }
 
+/* Footer */
 footer{
   padding: 15px 5px;
 }
