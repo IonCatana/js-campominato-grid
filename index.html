@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,50 @@
   <link rel="stylesheet" href="style.css">
   <title>Griglia Campo Minato</title>
 </head>
-<body>
-  
 
+<body>
+  <header class="header-bar">
+    <div class="titolo logo">
+      <div class="logo-container">
+        <img src="img/logo.jpeg" alt="">
+      </div>
+      <h1>Campo Minato</h1>
+    </div>
+    <div>
+      <label for="lvl-difficulty">Difficoltá:</label>
+      <select name="difficulty" id="lvl-difficulty">
+        <option id="easy">Easy</option>
+        <option id="medium">Medium</option>
+        <option id="hard">Hard</option>
+      </select>
+      <button id="btn-play">Play</button>
+    </div>
+
+  </header>
+  <main>
+    <div class="grid-wrapper">
+      <div class="grid">
+        <div class="grid-element"></div>
+        <div class="grid-element"></div>
+        <div class="grid-element"></div>
+        <div class="grid-element"></div>
+        <div class="grid-element"></div>
+        <div class="grid-element"></div>
+        <div class="grid-element"></div>
+        <div class="grid-element"></div>
+        <div class="grid-element"></div>
+        <div class="grid-element"></div>
+        <div class="grid-element"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <span>
+      Made with &hearts; by <a href="#">Boolean</a>
+    </span>
+  </footer>
   <script src="app.js"></script>
 </body>
+
 </html>
